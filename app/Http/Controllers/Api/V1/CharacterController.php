@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Character;
 use App\Http\Controllers\Controller;
@@ -35,6 +35,6 @@ class CharacterController extends Controller
     public function destroy(Character $character)
     {
         $character->delete();
-        return response()->noContent();
+        return response('Successfully deleted', 200);
     }
 }
